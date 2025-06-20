@@ -10,6 +10,7 @@ import boxing from "@/assets/user/boxing-min.jpg";
 import race from "@/assets/user/race-min.jpg";
 import esport from "@/assets/user/esport-min.jpg";
 import { useSelectedPageContext } from "@/hooks/use-context";
+import badminton from "@/assets/user/badminton-min.png";
 
 const MatchCard: React.FC<{ match: Match; small?: boolean }> = ({
   match,
@@ -42,6 +43,8 @@ const MatchCard: React.FC<{ match: Match; small?: boolean }> = ({
       ? boxing
       : match?.sport?.name === "eSports"
       ? esport
+      : match?.sport?.name === "Cầu lông"
+      ? badminton
       : "";
   return (
     <div
